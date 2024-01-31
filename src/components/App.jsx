@@ -21,7 +21,7 @@ export class App extends Component {
 
   onAddContact = contactData => {
     const checkedContact = this.state.contacts.find(
-      contact => contactData.name === contact.name
+      contact => contactData.name.toLowerCase() === contact.name.toLowerCase()
     );
     if (checkedContact) {
       alert(`${contactData.name} is already in contacts`);
